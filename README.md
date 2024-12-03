@@ -1,5 +1,8 @@
-# White_Cade_Dev2501_Exercise
+# Welcome!
 
+This is my repo for Web Development 2501: Interface Programming
+<br>
+<br>
 Everything will be inside the file in the dev branch or subsequent assignment branches.
 <br> 
 <br>
