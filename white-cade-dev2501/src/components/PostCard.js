@@ -21,6 +21,7 @@ const PostCard = (props) => {
       <br />
       <div style={styles.paragraph}>
         <p>{props.message}</p>
+        <img src={props.image} alt={props.alt} style={styles.cardImage} />
       </div>
     </article>
   );
@@ -39,7 +40,7 @@ const styles = {
     padding: "1%",
     border: "1px solid",
     width: "90%",
-    height: "20%",
+    height: "40%",
     backgroundColor: "white",
     boxShadow: "5px 10px 10px 10px lightgray",
   },
@@ -68,5 +69,10 @@ const styles = {
     border: "none",
     cursor: "pointer",
     backgroundColor: "white",
+  },
+
+  cardImage: {
+    width: "25%",
+    height: "50%",
   },
 };

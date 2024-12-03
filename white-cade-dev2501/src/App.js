@@ -8,6 +8,7 @@ import CocaCola_Santa from "./images/CocaCola_Santa.jpg";
 import LaysAd from "./images/LaysAd.png";
 import MobileFortnite from "./images/MobileFortnite.jpg";
 import Hero from "./images/hero-bg.jpg";
+import Monkey from "./images/Monkey_thinking.jpg";
 
 //Add buttons
 import MyBtn from "./components/buttons/Mybtn";
@@ -39,6 +40,8 @@ class App extends Component {
               profileImg={Hero}
               name={"Jane Doe"}
               message={"Ive been thinking a lot lately.... Who am I? LOL!"}
+              image={Monkey}
+              alt={"Picture of a monkey thinking."}
             />
           </div>
 
