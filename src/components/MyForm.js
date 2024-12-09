@@ -9,15 +9,15 @@ const MyForm = (props) => {
         <input
           style={styles.input}
           placeholder="Title of Post"
-          name="gName"
-          value={props.gName}
+          name="pName"
+          value={props.pName}
           onChange={props.getInput}
         />
         <input
           style={styles.input}
           placeholder="Tell us about your day..."
-          name="gDesc"
-          value={props.gDesc}
+          name="pDesc"
+          value={props.pDesc}
           onChange={props.getInput}
         />
 

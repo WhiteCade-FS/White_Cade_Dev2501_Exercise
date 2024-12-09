@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegTimesCircle, FaEdit } from "react-icons/fa";
 
-const GroceryArticle = (props) => {
+const PostArticle = (props) => {
   return (
     <article style={styles.myArticle} key={props.id}>
       <div style={styles.cardIcons}>
@@ -13,17 +13,17 @@ const GroceryArticle = (props) => {
         </button>
       </div>
       <img
-        src={props.val.gImg}
-        alt={props.val.gAlt}
+        src={props.val.pImg}
+        alt={props.val.pAlt}
         style={styles.profilePic}
       />
-      <h1>{props.val.gName}</h1>
-      <p style={styles.paragraph}>{props.val.gDesc}</p>
+      <h1>{props.val.pName}</h1>
+      <p style={styles.paragraph}>{props.val.pDesc}</p>
     </article>
   );
 };
 
-export default GroceryArticle;
+export default PostArticle;
 
 const styles = {
   myArticle: {

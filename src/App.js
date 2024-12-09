@@ -12,26 +12,30 @@ import AvatarIcon from "./images/cade_white_profile_pic.jpg";
 import Nav from "./components/Nav";
 //Add Form
 import MyForm from "./components/MyForm";
-//Add the PostCard
-import PostCard from "./components/PostCard";
 //Add Advertisements
 import MyAds from "./components/MyAds";
-
 //Import list
-import GroceryArticle from "./components/GroceryArticle";
+import PostArticle from "./components/PostArticle";
 
 class App extends Component {
   state = {
-    gList: [
+    post: [
       {
-        gName: "John Jacob",
-        gDesc:
+        pName: "John Jacob",
+        pDesc:
           "Whenever I go out, the people always shout. I am so loved, but ughhhh...",
-        gImg: Monkey,
-        gAlt: "picture of some bread",
+        pImg: Monkey,
+        pAlt: "picture of some bread",
       },
     ],
+    color: "red",
   };
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ color: "black" });
+    }, 5000);
+  }
 
   getInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -40,14 +44,14 @@ class App extends Component {
   addItem = (e) => {
     e.preventDefault();
     this.setState({
-      gList: [
-        ...this.state.gList,
+      post: [
+        ...this.state.post,
 
         {
-          gImg: AvatarIcon,
-          gName: this.state.gName,
-          gDesc: this.state.gDesc,
-          gAlt: this.state.gAlt,
+          pImg: AvatarIcon,
+          pName: this.state.pName,
+          pDesc: this.state.pDesc,
+          pAlt: this.state.pAlt,
         },
       ],
     });
@@ -63,16 +67,14 @@ class App extends Component {
   // };
 
   removeItem = (key) => {
-    const newgList = this.state.gList.filter((post, i) => i !== key);
-    this.setState({ gList: newgList });
+    const newPost = this.state.post.filter((post, i) => i !== key);
+    this.setState({ post: newPost });
   };
 
-  editItem;
-
   render() {
-    let myList = this.state.gList.map((element, i) => {
+    let myList = this.state.post.map((element, i) => {
       return (
-        <GroceryArticle
+        <PostArticle
           key={i}
           val={element}
           delMe={() => this.removeItem(i)}
@@ -87,16 +89,7 @@ class App extends Component {
         <div style={styles.container}>
           <Nav style={styles.nav} />
           <main style={styles.main}>
-            {/* <MyAvatar AvatarIcon={AvatarIcon} /> */}
-            {/* <img src={AvatarIcon} alt="Logo" style={styles.logo} /> */}
             <MyForm getInput={this.getInput} addItem={this.addItem} />
-            <PostCard
-              profileImg={Hero}
-              name={"Jane Doe"}
-              message={"Ive been thinking a lot lately.... Who am I? LOL!"}
-              image={Monkey}
-              altImage={"Picture of a monkey thinking."}
-            />
             {myList}
           </main>
           <aside style={styles.ads}>

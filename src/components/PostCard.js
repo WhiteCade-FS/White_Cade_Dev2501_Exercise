@@ -5,10 +5,10 @@ const PostCard = (props) => {
   return (
     <article style={styles.myArticle}>
       <div style={styles.cardIcons}>
-        <button style={styles.iconButton}>
+        <button style={styles.iconButton} onClick={props.editMe}>
           <FaEdit />
         </button>
-        <button style={styles.iconButton}>
+        <button style={styles.iconButton} onClick={props.delMe}>
           <FaRegTimesCircle />
         </button>
       </div>
