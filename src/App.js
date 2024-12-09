@@ -7,6 +7,7 @@ import LaysAd from "./images/LaysAd.png";
 import MobileFortnite from "./images/MobileFortnite.jpg";
 import Hero from "./images/hero-bg.jpg";
 import Monkey from "./images/Monkey_thinking.jpg";
+import AvatarIcon from "./images/cade_white_profile_pic.jpg";
 //Add Navigation
 import Nav from "./components/Nav";
 //Add Form
@@ -33,8 +34,7 @@ class App extends Component {
   };
 
   getInput = (e) => {
-    this.setState({ gDesc: e.target.value });
-    this.setState({ gName: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   addItem = (e) => {
@@ -44,33 +44,41 @@ class App extends Component {
         ...this.state.gList,
 
         {
+          gImg: AvatarIcon,
           gName: this.state.gName,
           gDesc: this.state.gDesc,
+          gAlt: this.state.gAlt,
         },
       ],
     });
     e.target.reset();
   };
 
-  // addPost = (newPost) => {
-  //   this.setState({ posts: [...this.state.posts, newPost] });
+  // removeItem = (key) => {
+  //   const newgList = [...this.state.gList];
+  //   newgList.splice(key, 1);
+  //   this.setState(() => ({
+  //     gList: newgList,
+  //   }));
   // };
 
-  // deletePost = (id) => {
-  //   this.setState({ posts: this.state.posts.filter((post) => post.id !== id) });
-  // };
+  removeItem = (key) => {
+    const newgList = this.state.gList.filter((post, i) => i !== key);
+    this.setState({ gList: newgList });
+  };
 
-  // editPost = (updatePost) => {
-  //   this.setState({
-  //     posts: this.state.posts.map((post) =>
-  //       post.id === updatePost.id ? updatePost : post
-  //     ),
-  //   });
-  // };
+  editItem;
 
   render() {
     let myList = this.state.gList.map((element, i) => {
-      return <GroceryArticle key={i} val={element} />;
+      return (
+        <GroceryArticle
+          key={i}
+          val={element}
+          delMe={() => this.removeItem(i)}
+          editMe={() => this.editItem(element)}
+        />
+      );
     });
 
     return (

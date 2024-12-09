@@ -3,12 +3,12 @@ import { FaRegTimesCircle, FaEdit } from "react-icons/fa";
 
 const GroceryArticle = (props) => {
   return (
-    <article style={styles.myArticle}>
+    <article style={styles.myArticle} key={props.id}>
       <div style={styles.cardIcons}>
-        <button style={styles.iconButton}>
+        <button style={styles.iconButton} onClick={props.editMe}>
           <FaEdit />
         </button>
-        <button style={styles.iconButton}>
+        <button style={styles.iconButton} onClick={props.delMe}>
           <FaRegTimesCircle />
         </button>
       </div>
