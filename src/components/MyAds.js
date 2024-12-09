@@ -1,5 +1,4 @@
 import React from "react";
-
 const MyAds = (props) => {
   return (
     <article style={styles.myArticle}>
@@ -14,9 +13,7 @@ const MyAds = (props) => {
     </article>
   );
 };
-
 export default MyAds;
-
 const styles = {
   myArticle: {
     display: "flex",

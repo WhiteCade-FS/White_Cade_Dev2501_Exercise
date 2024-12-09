@@ -1,24 +1,28 @@
 import React from "react";
 import { FaEnvelope, FaNewspaper, FaTv } from "react-icons/fa";
-
 //Dummy Component
-
 const Nav = (props) => {
   return (
     <div style={styles.navContainer}>
       <span style={styles.navIcons}>
-        <FaTv /> <button style={styles.buttonStyle}>Watch</button>
-        <br />
-        <FaEnvelope /> <button style={styles.buttonStyle}>Messages</button>
-        <br />
-        <FaNewspaper /> <button style={styles.buttonStyle}>NewFeed</button>
+        <button style={styles.buttonStyle}>
+          <FaTv />
+          <br /> Watch
+        </button>
+        <button style={styles.buttonStyle}>
+          <FaEnvelope />
+          <br />
+          Messages
+        </button>
+        <button style={styles.buttonStyle}>
+          <FaNewspaper /> <br />
+          NewFeed
+        </button>
       </span>
     </div>
   );
 };
-
 export default Nav;
-
 const styles = {
   navContainer: {
     display: "flex",
@@ -27,7 +31,6 @@ const styles = {
     width: "8%",
     backgroundColor: "black",
   },
-
   navIcons: {
     color: "white",
     backgroundColor: "black",
@@ -36,7 +39,6 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
   },
-
   buttonStyle: {
     backgroundColor: "lightgray",
     color: "black",

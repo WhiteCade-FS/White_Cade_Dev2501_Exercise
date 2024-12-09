@@ -1,7 +1,7 @@
 import React from "react";
-import { FaEdit, FaRegTimesCircle } from "react-icons/fa";
-// Dummy Component
-const PostCard = (props) => {
+import { FaRegTimesCircle, FaEdit } from "react-icons/fa";
+
+const GroceryArticle = (props) => {
   return (
     <article style={styles.myArticle}>
       <div style={styles.cardIcons}>
@@ -13,18 +13,18 @@ const PostCard = (props) => {
         </button>
       </div>
       <img
-        src={props.profileImg}
+        src={props.val.gImg}
+        alt={props.val.gAlt}
         style={styles.profilePic}
-        alt={props.altImage}
       />
-      <h1>{props.name}</h1>
-      <div style={styles.paragraph}>
-        <p>{props.message}</p>
-      </div>
+      <h1>{props.val.gName}</h1>
+      <p style={styles.paragraph}>{props.val.gDesc}</p>
     </article>
   );
 };
-export default PostCard;
+
+export default GroceryArticle;
+
 const styles = {
   myArticle: {
     display: "flex",

@@ -1,16 +1,8 @@
-import React, { Component } from "react";
-
+import React from "react";
 import MyIcons from "./MyIcons";
 import ImageUrl from "../images/cade_white_profile_pic.jpg";
 import LogoUrl from "../images/BlackTie.png";
-import {
-  FaSearch,
-  FaEnvelope,
-  FaBell,
-  FaBlackTie,
-  FaCog,
-} from "react-icons/fa";
-
+import { FaSearch, FaEnvelope, FaCog } from "react-icons/fa";
 const Header = (props) => {
   return (
     <header style={styles.header}>
@@ -38,9 +30,7 @@ const Header = (props) => {
     </header>
   );
 };
-
 export default Header;
-
 const styles = {
   header: {
     padding: "1%",
@@ -51,13 +41,11 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
   },
-
   left: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
   },
-
   logo: {
     borderRadius: "50%",
     height: "50px",
@@ -67,7 +55,6 @@ const styles = {
     backgroundColor: "white",
     alignItems: "center",
   },
-
   searchCont: {
     border: "1px solid #ddd",
     display: "flex",
@@ -75,7 +62,6 @@ const styles = {
     borderRadius: "2px",
     width: "40%",
   },
-
   inputIcon: {
     background: "#ddd",
     padding: "10px",
@@ -83,13 +69,11 @@ const styles = {
     alignItems: "center",
     fontSize: "1rem",
   },
-
   inputWithIcon: {
     border: "none",
     flex: 1,
     padding: "5px",
   },
-
   rightSide: {
     display: "flex",
     flexDirection: "row",

@@ -1,27 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
 import MyBtn from "./buttons/Mybtn";
 import AvatarIcon from "../images/cade_white_profile_pic.jpg";
-
 const MyForm = (props) => {
   return (
-    <form style={styles.myForm} onSubmit={props.addName}>
+    <form style={styles.myForm} onSubmit={props.addItem}>
       <div style={styles.inputContainer}>
         <img src={AvatarIcon} alt="Logo" style={styles.logo} />
-        <textarea
+        <input
+          style={styles.input}
+          placeholder="Title of Post"
+          name="gName"
+          value={props.gName}
+          onChange={props.getInput}
+        />
+        <input
           style={styles.input}
           placeholder="Tell us about your day..."
+          name="gDesc"
+          value={props.gDesc}
+          onChange={props.getInput}
         />
-        {/* <input style={styles.input} placeholder="Tell us about your day..." /> */}
-        {/* <div> */}
-        <MyBtn btnText="Post" />
-        {/* </div> */}
+
+        <MyBtn btnText="Post" type="submit" />
       </div>
     </form>
   );
 };
-
 export default MyForm;
-
 const styles = {
   myForm: {
     display: "flex",
@@ -31,7 +36,6 @@ const styles = {
     width: "100%",
     // backgroundColor: "white",
   },
-
   inputContainer: {
     display: "flex",
     flexDirection: "row",
@@ -46,15 +50,13 @@ const styles = {
     boxShadow: "5px 10px 10px 10px gray",
     backgroundColor: "white",
   },
-
   input: {
     padding: "2%",
-    width: "50%",
-    height: "40%",
+    width: "15%",
+    height: "20%",
     border: "none",
     boxShadow: "5px 5px 5px 5px lightgray",
   },
-
   logo: {
     height: "75px",
     cursor: "pointer",
