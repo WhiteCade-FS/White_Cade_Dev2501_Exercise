@@ -1,6 +1,5 @@
 import React from "react";
 import { FaRegTimesCircle, FaEdit } from "react-icons/fa";
-
 const PostArticle = (props) => {
   return (
     <article style={styles.myArticle} key={props.id}>
@@ -22,9 +21,7 @@ const PostArticle = (props) => {
     </article>
   );
 };
-
 export default PostArticle;
-
 const styles = {
   myArticle: {
     display: "flex",
