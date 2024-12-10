@@ -5,7 +5,6 @@ import Header from "./components/Header";
 import CocaCola_Santa from "./images/CocaCola_Santa.jpg";
 import LaysAd from "./images/LaysAd.png";
 import MobileFortnite from "./images/MobileFortnite.jpg";
-import Hero from "./images/hero-bg.jpg";
 import Monkey from "./images/Monkey_thinking.jpg";
 import AvatarIcon from "./images/cade_white_profile_pic.jpg";
 //Add Navigation
@@ -16,7 +15,6 @@ import MyForm from "./components/MyForm";
 import MyAds from "./components/MyAds";
 //Import list
 import PostArticle from "./components/PostArticle";
-
 class App extends Component {
   state = {
     post: [
@@ -30,17 +28,14 @@ class App extends Component {
     ],
     color: "red",
   };
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({ color: "black" });
     }, 5000);
   }
-
   getInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
-
   addItem = (e) => {
     e.preventDefault();
     this.setState({
@@ -57,7 +52,6 @@ class App extends Component {
     });
     e.target.reset();
   };
-
   // removeItem = (key) => {
   //   const newgList = [...this.state.gList];
   //   newgList.splice(key, 1);
@@ -65,12 +59,10 @@ class App extends Component {
   //     gList: newgList,
   //   }));
   // };
-
   removeItem = (key) => {
     const newPost = this.state.post.filter((post, i) => i !== key);
     this.setState({ post: newPost });
   };
-
   render() {
     let myList = this.state.post.map((element, i) => {
       return (
@@ -82,7 +74,6 @@ class App extends Component {
         />
       );
     });
-
     return (
       <div>
         <Header pgTitle="CharacterSpace" placeholder="Search..." />
