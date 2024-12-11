@@ -63,6 +63,9 @@ class App extends Component {
     const newPost = this.state.post.filter((post, i) => i !== key);
     this.setState({ post: newPost });
   };
+
+
+  
   render() {
     let myList = this.state.post.map((element, i) => {
       return (

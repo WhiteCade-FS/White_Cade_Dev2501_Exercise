@@ -3,7 +3,7 @@ import { FaEnvelope, FaNewspaper, FaTv } from "react-icons/fa";
 //Dummy Component
 const Nav = (props) => {
   return (
-    <div style={styles.navContainer}>
+    <nav style={styles.navContainer}>
       <span style={styles.navIcons}>
         <button style={styles.buttonStyle}>
           <FaTv />
@@ -19,7 +19,7 @@ const Nav = (props) => {
           NewFeed
         </button>
       </span>
-    </div>
+    </nav>
   );
 };
 export default Nav;
