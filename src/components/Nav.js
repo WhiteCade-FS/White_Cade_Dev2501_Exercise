@@ -1,22 +1,42 @@
 import React from "react";
-import { FaEnvelope, FaNewspaper, FaTv } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaNewspaper,
+  FaDashcube,
+  FaChartPie,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 //Dummy Component
 const Nav = (props) => {
   return (
     <div style={styles.navContainer}>
       <span style={styles.navIcons}>
         <button style={styles.buttonStyle}>
-          <FaTv />
-          <br /> Watch
+          <Link to="/dashboard" style={styles.link}>
+            <FaDashcube />
+            <br />
+            Dashboard
+          </Link>
         </button>
         <button style={styles.buttonStyle}>
-          <FaEnvelope />
-          <br />
-          Messages
+          <Link to="/chartDash" style={styles.link}>
+            <FaChartPie />
+            <br />
+            Charts
+          </Link>
         </button>
         <button style={styles.buttonStyle}>
-          <FaNewspaper /> <br />
-          NewFeed
+          <Link to="/messages" style={styles.link}>
+            <FaEnvelope />
+            <br />
+            Messages
+          </Link>
+        </button>
+        <button style={styles.buttonStyle}>
+          <Link to="/newsfeed" style={styles.link}>
+            <FaNewspaper /> <br />
+            NewFeed
+          </Link>
         </button>
       </span>
     </div>
@@ -49,5 +69,10 @@ const styles = {
     width: "100px",
     borderRadius: "10%",
     border: "1px solid white",
+  },
+
+  link: {
+    color: "black",
+    textDecoration: "none",
   },
 };

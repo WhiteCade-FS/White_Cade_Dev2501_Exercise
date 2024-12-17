@@ -3,6 +3,7 @@ import MyIcons from "./MyIcons";
 import ImageUrl from "../images/cade_white_profile_pic.jpg";
 import LogoUrl from "../images/BlackTie.png";
 import { FaSearch, FaEnvelope, FaCog } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Header = (props) => {
   return (
     <header style={styles.header}>
@@ -23,7 +24,9 @@ const Header = (props) => {
           <FaEnvelope />
         </button>
         <button style={styles.rightIcons}>
-          <FaCog />
+          <Link to="/settings" style={styles.link}>
+            <FaCog />
+          </Link>
         </button>
         <MyIcons IconImg={ImageUrl} />
       </div>
@@ -79,5 +82,9 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     marginRight: "3%",
+  },
+  link: {
+    color: "black",
+    textDecoration: "none",
   },
 };

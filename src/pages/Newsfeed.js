@@ -1,29 +1,22 @@
 import React, { Component } from "react";
-import { Routes, Route } from "react-router-dom";
 //Add the Header
-import Header from "./components/Header";
+import Header from "../components/Header";
 // Add Images
-import CocaCola_Santa from "./images/CocaCola_Santa.jpg";
-import LaysAd from "./images/LaysAd.png";
-import MobileFortnite from "./images/MobileFortnite.jpg";
-import Monkey from "./images/Monkey_thinking.jpg";
-import AvatarIcon from "./images/cade_white_profile_pic.jpg";
+import CocaCola_Santa from "../images/CocaCola_Santa.jpg";
+import LaysAd from "../images/LaysAd.png";
+import MobileFortnite from "../images/MobileFortnite.jpg";
+import Monkey from "../images/Monkey_thinking.jpg";
+import AvatarIcon from "../images/cade_white_profile_pic.jpg";
 //Add Navigation
-import Nav from "./components/Nav";
+import Nav from "../components/Nav";
 //Add Form
-import MyForm from "./components/MyForm";
+import MyForm from "../components/MyForm";
 //Add Advertisements
-import MyAds from "./components/MyAds";
+import MyAds from "../components/MyAds";
 //Import list
-import PostArticle from "./components/PostArticle";
-//Import Dash and Chart
-import Dashboard from "./pages/Dashboard";
-import ChartDash from "./pages/ChartDash";
-import Messages from "./pages/Messages";
-import Settings from "./pages/Settings";
-import Newsfeed from "./pages/Newsfeed";
+import PostArticle from "../components/PostArticle";
 
-class App extends Component {
+class Newsfeed extends Component {
   state = {
     post: [
       {
@@ -81,16 +74,6 @@ class App extends Component {
         <Header pgTitle="CharacterSpace" placeholder="Search..." />
         <div style={styles.container}>
           <Nav style={styles.nav} />
-          <section>
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="dashboard" element={<Dashboard />} />
-              <Route path="chartDash" element={<ChartDash />} />
-              <Route path="messages" element={<Messages />} />
-              <Route path="settings" element={<Settings />} />
-              <Route path="newsfeed" element={<Newsfeed />} />
-            </Routes>
-          </section>
           <main style={styles.main}>
             <MyForm getInput={this.getInput} addItem={this.addItem} />
 
@@ -130,7 +113,7 @@ class App extends Component {
     );
   }
 }
-export default App;
+export default Newsfeed;
 // Styling for the dashboard is below
 const styles = {
   container: {
