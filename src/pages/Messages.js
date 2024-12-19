@@ -14,9 +14,9 @@ export default Messages;
 
 const styles = {
   container: {
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
-    width: "99vw",
+    // display: "flex",
+    // flexDirection: "column",
+    // height: "100vh",
+    // width: "99vw",
   },
 };
