@@ -32,7 +32,7 @@ function App() {
             <Route path="messages" element={<Messages />} />
             <Route path="settings" element={<Settings />} />
             <Route path="newsfeed" element={<Newsfeed />} />
-            <Route path="/profile" element={<UserProfile />} />
+            <Route path="profile" element={<UserProfile />} />
           </Routes>
         </main>
         <aside style={styles.ads}>
