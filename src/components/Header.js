@@ -28,7 +28,11 @@ const Header = (props) => {
             <FaCog />
           </Link>
         </button>
-        <MyIcons IconImg={ImageUrl} />
+        <button style={styles.profileImg}>
+          <Link to="/profile" style={styles.link}>
+            <MyIcons IconImg={ImageUrl} />
+          </Link>
+        </button>
       </div>
     </header>
   );
@@ -86,5 +90,10 @@ const styles = {
   link: {
     color: "black",
     textDecoration: "none",
+  },
+  profileImg: {
+    border: "none",
+    backgroundColor: "transparent",
+    borderRadius: "2px",
   },
 };
