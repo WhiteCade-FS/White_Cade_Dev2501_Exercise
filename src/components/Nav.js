@@ -122,6 +122,13 @@ const Nav = (props) => {
               Profile
             </Link>
           </button>
+          <button style={styles.buttonStyle}>
+            <Link to="/users" style={styles.link}>
+              <FaUserCircle />
+              <br />
+              Users
+            </Link>
+          </button>
         </span>
       )}
     </div>

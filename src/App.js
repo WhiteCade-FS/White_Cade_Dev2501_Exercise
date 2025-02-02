@@ -17,6 +17,7 @@ import Messages from "./pages/Messages";
 import Settings from "./pages/Settings";
 import Newsfeed from "./pages/Newsfeed";
 import UserProfile from "./pages/UserProfile";
+import Users from "./pages/Users";
 // Start the App Function
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="newsfeed" element={<Newsfeed />} />
             <Route path="profile" element={<UserProfile />} />
+            <Route path="users" element={<Users />} />
           </Routes>
         </main>
         <aside style={styles.ads}>
